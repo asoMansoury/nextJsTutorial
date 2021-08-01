@@ -2,10 +2,12 @@ import React from 'react';
 import {Swiper,SwiperSlide} from 'swiper/react';
 import styles from './slider.module.css';
 import SwiperCore, {Navigation,Pagination} from 'swiper'
-
+import {useRouter} from 'next/router';
 SwiperCore.use(Navigation,Pagination);
 
 const HeaderSlider = ()=>{
+    const router = useRouter();
+    console.log(router.pathname);
     return (
         <div>
             <Swiper
